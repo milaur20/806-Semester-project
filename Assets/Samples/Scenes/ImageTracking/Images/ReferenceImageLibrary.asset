@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5438900029218683827
+  m_GuidHigh: 11338665651040755373
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5256767270235307406
+      m_GuidHigh: 7631590748165204897
+    m_SerializedTextureGuid:
+      m_GuidLow: 12579876350941887001
+      m_GuidHigh: 8847842733658398376
+    m_Size: {x: 0.1, y: 0.13333334}
+    m_SpecifySize: 1
+    m_Name: Cylinder
+    m_Texture: {fileID: 2800000, guid: e03a7a19b2e3ae94a8de3aa016dac97a, type: 3}
+  - m_SerializedGuid:
+      m_GuidLow: 5202918912915436614
+      m_GuidHigh: 15105188923932946570
+    m_SerializedTextureGuid:
+      m_GuidLow: 9544458664407855650
+      m_GuidHigh: 4146685896376119880
+    m_Size: {x: 0.1, y: 0.13333334}
+    m_SpecifySize: 1
+    m_Name: Cube
+    m_Texture: {fileID: 2800000, guid: 296df222ba96847448f29e48dafc8b39, type: 3}
