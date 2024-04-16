@@ -49,6 +49,7 @@ public class UIManager : MonoBehaviour
             // Pause the current video player and play the second one
             Debug.Log("Switching to video 2");
             infoVideo1.Pause();
+            infoVideo2.gameObject.SetActive(true);
             infoVideo2.Play();
             infoVideo1.gameObject.SetActive(false);
         }
@@ -57,6 +58,7 @@ public class UIManager : MonoBehaviour
             // Pause the current video player and play the first one
             Debug.Log("Switching to video 1");
             infoVideo2.Pause();
+            infoVideo2.gameObject.SetActive(false);
             infoVideo1.gameObject.SetActive(true);
             infoVideo1.Play();
         }
