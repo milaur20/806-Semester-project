@@ -354,6 +354,8 @@ GameObject:
   - component: {fileID: 6894258769570344279}
   - component: {fileID: 8710026425777589419}
   - component: {fileID: 4700599320900880712}
+  - component: {fileID: 3621034973816385861}
+  - component: {fileID: 6453829326731694176}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -443,6 +445,39 @@ MonoBehaviour:
     segmentNumber: 1
   - gameObject: {fileID: 897987111887835993}
     segmentNumber: 2
+--- !u!114 &3621034973816385861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3398973249425305326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56f7def3ce3ef064299badc6d1a33752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &6453829326731694176
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3398973249425305326}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 0.05138244, z: 2.0000005}
+  m_Center: {x: 0, y: -0.025691219, z: 0}
 --- !u!1 &4703268225707723432
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7099298654710212657}
+  - component: {fileID: 1667482524956973202}
   m_Layer: 0
   m_Name: QRCode
   m_TagString: Untagged
@@ -477,3 +513,16 @@ Transform:
   - {fileID: 5950845863269662688}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1667482524956973202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4703268225707723432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e1789d317eed5488c95300a53982fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabImagePairManager: {fileID: 0}

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 #if UNITY_EDITOR
 using UnityEditor;
@@ -42,6 +42,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         Dictionary<Guid, GameObject> m_Instantiated = new Dictionary<Guid, GameObject>();
         ARTrackedImageManager m_TrackedImageManager;
 
+        public GameObject instantiatedPrefab;
         [SerializeField]
         [Tooltip("Reference Image Library")]
         XRReferenceImageLibrary m_ImageLibrary;
@@ -102,7 +103,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
         void AssignPrefab(ARTrackedImage trackedImage)
         {
             if (m_PrefabsDictionary.TryGetValue(trackedImage.referenceImage.guid, out var prefab))
+            {
                 m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
+                instantiatedPrefab = m_Instantiated[trackedImage.referenceImage.guid];
+            }
         }
 
         public GameObject GetPrefabForReferenceImage(XRReferenceImage referenceImage)
