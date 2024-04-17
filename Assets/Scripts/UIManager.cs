@@ -8,28 +8,31 @@ using UnityEngine.Video;
 
 public class UIManager : MonoBehaviour
 {
-
     public RawImage infoVideoPlayer;
-    public VideoPlayer infoVideo1;
-    public VideoPlayer infoVideo2;
+    public VideoPlayer[] infoVideos;
+    public TextMeshProUGUI[] infoTexts;
+    public Image[] dotMenus;
     private RenderTexture renderTexture;
 
-    private bool isPlayingFirstVideo = true;
+    private int currentVideoIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         // Create a new RenderTexture with the same dimensions as the RawImage
-        renderTexture = new RenderTexture((int)infoVideoPlayer.rectTransform.rect.width, 
+        renderTexture = new RenderTexture((int)infoVideoPlayer.rectTransform.rect.width,
                                            (int)infoVideoPlayer.rectTransform.rect.height, 0);
         renderTexture.Create();
 
-        // Set the RenderTexture as the target texture for both VideoPlayers
-        infoVideo1.targetTexture = renderTexture;
-        infoVideo2.targetTexture = renderTexture;
+        // Set the RenderTexture as the target texture for all VideoPlayers
+        foreach (VideoPlayer videoPlayer in infoVideos)
+        {
+            videoPlayer.targetTexture = renderTexture;
+            videoPlayer.Stop(); // Stop all videos initially
+        }
 
         // Set the initial video player to play
-        infoVideo1.Play();
+        PlayVideo(0);
     }
 
     // Update is called once per frame
@@ -39,30 +42,41 @@ public class UIManager : MonoBehaviour
         infoVideoPlayer.texture = renderTexture;
     }
 
-    public void QRButtonClick() {
+    public void QRButtonClick()
+    {
         SceneManager.LoadScene("ImageTrackingWithMultiplePrefabs");
     }
 
-    public void GlobalInfoClick(){
-        if (isPlayingFirstVideo)
+    public void GlobalInfoClick()
+    {
+        int nextVideoIndex = (currentVideoIndex + 1) % infoVideos.Length;
+        PlayVideo(nextVideoIndex);
+    }
+
+    void PlayVideo(int index)
+    {
+        foreach (VideoPlayer videoPlayer in infoVideos)
         {
-            // Pause the current video player and play the second one
-            Debug.Log("Switching to video 2");
-            infoVideo1.Pause();
-            infoVideo2.gameObject.SetActive(true);
-            infoVideo2.Play();
-            infoVideo1.gameObject.SetActive(false);
-        }
-        else
-        {
-            // Pause the current video player and play the first one
-            Debug.Log("Switching to video 1");
-            infoVideo2.Pause();
-            infoVideo2.gameObject.SetActive(false);
-            infoVideo1.gameObject.SetActive(true);
-            infoVideo1.Play();
+            videoPlayer.Stop();
+            videoPlayer.gameObject.SetActive(false);
         }
 
-        isPlayingFirstVideo = !isPlayingFirstVideo;
+        foreach (TextMeshProUGUI text in infoTexts)
+        {
+            text.gameObject.SetActive(false);
+        }
+
+        foreach (Image image in dotMenus){
+            image.gameObject.SetActive(false);
+        }
+
+        infoVideos[index].gameObject.SetActive(true);
+        infoVideos[index].Play();
+
+        infoTexts[index].gameObject.SetActive(true);
+
+        dotMenus[index].gameObject.SetActive(true);
+
+        currentVideoIndex = index;
     }
 }
