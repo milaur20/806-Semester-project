@@ -24,7 +24,6 @@ public class UIManager : MonoBehaviour
     }
     void Update()
     {
-        Debug.Log("Update");
         // Check if there's any touch input
         if (Input.touchCount > 0)
         {
@@ -38,7 +37,7 @@ public class UIManager : MonoBehaviour
                     if (touch.tapCount == 1 && touch.fingerId == 0)
                     {
                         // Handle the single tap here
-                        Debug.Log("Single tap detected!");
+                        //Debug.Log("Single tap detected!");
                         GlobalInfoClick();
                     }
                 }
