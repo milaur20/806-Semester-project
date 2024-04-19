@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject[] infoAnimations;
     public TextMeshProUGUI[] infoTexts;
     public Image[] dotMenus;
+    public GameObject infoscreen;
 
     private int currentAnimationIndex = 0;
 
@@ -18,6 +19,31 @@ public class UIManager : MonoBehaviour
     {
         // Set the initial animation to play
         PlayAnimation(0);
+        infoscreen = GameObject.Find("InfoScreen");
+
+    }
+    void Update()
+    {
+        Debug.Log("Update");
+        // Check if there's any touch input
+        if (Input.touchCount > 0)
+        {
+            // Iterate through all the touches
+            foreach (Touch touch in Input.touches)
+            {
+                // Check if the touch phase is just began
+                if (touch.phase == TouchPhase.Began)
+                {
+                    // Check if it's a single tap with one finger
+                    if (touch.tapCount == 1 && touch.fingerId == 0)
+                    {
+                        // Handle the single tap here
+                        Debug.Log("Single tap detected!");
+                        GlobalInfoClick();
+                    }
+                }
+            }
+        }
     }
 
     public void QRButtonClick()
@@ -27,8 +53,20 @@ public class UIManager : MonoBehaviour
 
     public void GlobalInfoClick()
     {
-        int nextAnimationIndex = (currentAnimationIndex + 1) % infoAnimations.Length;
-        PlayAnimation(nextAnimationIndex);
+        Debug.Log(currentAnimationIndex);
+        // Increment the currentAnimationIndex by 1
+        currentAnimationIndex++;
+
+        // Check if the currentAnimationIndex exceeds the length of infoAnimations
+        if (currentAnimationIndex >= infoAnimations.Length)
+        {
+            // If it does, disable the GameObject
+            gameObject.SetActive(false);
+            return; // Exit the function early to prevent accessing an out-of-bounds index
+        }
+
+        // If the currentAnimationIndex is within bounds, play the next animation
+        PlayAnimation(currentAnimationIndex);
     }
 
     void PlayAnimation(int index)
