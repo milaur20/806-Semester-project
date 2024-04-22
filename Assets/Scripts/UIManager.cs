@@ -4,42 +4,45 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
-using UnityEngine.Video;
 
 public class UIManager : MonoBehaviour
 {
-    public RawImage infoVideoPlayer;
-    public VideoPlayer[] infoVideos;
+    public GameObject[] infoAnimations;
     public TextMeshProUGUI[] infoTexts;
     public Image[] dotMenus;
-    private RenderTexture renderTexture;
+    public GameObject infoscreen;
 
-    private int currentVideoIndex = 0;
+    private int currentAnimationIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        // Create a new RenderTexture with the same dimensions as the RawImage
-        renderTexture = new RenderTexture((int)infoVideoPlayer.rectTransform.rect.width,
-                                           (int)infoVideoPlayer.rectTransform.rect.height, 0);
-        renderTexture.Create();
+        // Set the initial animation to play
+        PlayAnimation(0);
+        infoscreen = GameObject.Find("InfoScreen");
 
-        // Set the RenderTexture as the target texture for all VideoPlayers
-        foreach (VideoPlayer videoPlayer in infoVideos)
-        {
-            videoPlayer.targetTexture = renderTexture;
-            videoPlayer.Stop(); // Stop all videos initially
-        }
-
-        // Set the initial video player to play
-        PlayVideo(0);
     }
-
-    // Update is called once per frame
     void Update()
     {
-        // Update the RawImage texture to the RenderTexture
-        infoVideoPlayer.texture = renderTexture;
+        // Check if there's any touch input
+        if (Input.touchCount > 0)
+        {
+            // Iterate through all the touches
+            foreach (Touch touch in Input.touches)
+            {
+                // Check if the touch phase is just began
+                if (touch.phase == TouchPhase.Began)
+                {
+                    // Check if it's a single tap with one finger
+                    if (touch.tapCount == 1 && touch.fingerId == 0)
+                    {
+                        // Handle the single tap here
+                        //Debug.Log("Single tap detected!");
+                        GlobalInfoClick();
+                    }
+                }
+            }
+        }
     }
 
     public void QRButtonClick()
@@ -49,16 +52,27 @@ public class UIManager : MonoBehaviour
 
     public void GlobalInfoClick()
     {
-        int nextVideoIndex = (currentVideoIndex + 1) % infoVideos.Length;
-        PlayVideo(nextVideoIndex);
+        Debug.Log(currentAnimationIndex);
+        // Increment the currentAnimationIndex by 1
+        currentAnimationIndex++;
+
+        // Check if the currentAnimationIndex exceeds the length of infoAnimations
+        if (currentAnimationIndex >= infoAnimations.Length)
+        {
+            // If it does, disable the GameObject
+            gameObject.SetActive(false);
+            return; // Exit the function early to prevent accessing an out-of-bounds index
+        }
+
+        // If the currentAnimationIndex is within bounds, play the next animation
+        PlayAnimation(currentAnimationIndex);
     }
 
-    void PlayVideo(int index)
+    void PlayAnimation(int index)
     {
-        foreach (VideoPlayer videoPlayer in infoVideos)
+        foreach (GameObject animationObject in infoAnimations)
         {
-            videoPlayer.Stop();
-            videoPlayer.gameObject.SetActive(false);
+            animationObject.SetActive(false);
         }
 
         foreach (TextMeshProUGUI text in infoTexts)
@@ -66,17 +80,17 @@ public class UIManager : MonoBehaviour
             text.gameObject.SetActive(false);
         }
 
-        foreach (Image image in dotMenus){
+        foreach (Image image in dotMenus)
+        {
             image.gameObject.SetActive(false);
         }
 
-        infoVideos[index].gameObject.SetActive(true);
-        infoVideos[index].Play();
+        infoAnimations[index].SetActive(true);
 
         infoTexts[index].gameObject.SetActive(true);
 
         dotMenus[index].gameObject.SetActive(true);
 
-        currentVideoIndex = index;
+        currentAnimationIndex = index;
     }
 }
