@@ -8,7 +8,6 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public GameObject[] infoAnimations;
-    public TextMeshProUGUI[] infoTexts;
     public Image[] dotMenus;
     public GameObject infoscreen;
 
@@ -75,19 +74,12 @@ public class UIManager : MonoBehaviour
             animationObject.SetActive(false);
         }
 
-        foreach (TextMeshProUGUI text in infoTexts)
-        {
-            text.gameObject.SetActive(false);
-        }
-
         foreach (Image image in dotMenus)
         {
             image.gameObject.SetActive(false);
         }
 
         infoAnimations[index].SetActive(true);
-
-        infoTexts[index].gameObject.SetActive(true);
 
         dotMenus[index].gameObject.SetActive(true);
 
