@@ -85,4 +85,13 @@ public class UIManager : MonoBehaviour
 
         currentAnimationIndex = index;
     }
+
+    public void ClickDanish(){
+        SceneManager.LoadScene("StartInfo");
+    }
+
+    public void ClickEnglish(){
+        SceneManager.LoadScene("StartInfo_EN");
+    }
+
 }

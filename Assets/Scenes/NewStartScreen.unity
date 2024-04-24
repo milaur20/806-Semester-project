@@ -985,7 +985,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2710991, y: -30}
+  m_AnchoredPosition: {x: -1.2710991, y: 154}
   m_SizeDelta: {x: 243.2163, y: 235.9997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &873694288
@@ -1034,7 +1034,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9022784993309951898}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: QRButtonClick
+        m_MethodName: ClickDanish
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1151,7 +1151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2710991, y: -308}
+  m_AnchoredPosition: {x: -1.2710991, y: -124}
   m_SizeDelta: {x: 243.2163, y: 235.9997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600072907
@@ -1200,7 +1200,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9022784993309951898}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: QRButtonClick
+        m_MethodName: ClickEnglish
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1805,6 +1805,18 @@ PrefabInstance:
       value: -279.35
       objectReference: {fileID: 0}
     - target: {fileID: 2417705693292934535, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: DA_LanguageButton
+      value: 
+      objectReference: {fileID: 873694288}
+    - target: {fileID: 2417705693292934535, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: EN_LanguageButton
+      value: 
+      objectReference: {fileID: 1600072907}
+    - target: {fileID: 2417705693292934535, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: dotMenus.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417705693292934535, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: infoTexts.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -1827,6 +1839,10 @@ PrefabInstance:
     - target: {fileID: 2417705693292934535, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: infoTexts.Array.data[1]
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417705693292934535, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: infoAnimations.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2417705693292934535, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: infoAnimations.Array.data[0]
@@ -2019,6 +2035,10 @@ PrefabInstance:
     - target: {fileID: 5096425463188760149, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -819.6697
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713964198284884016, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6274438070792826770, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: m_SizeDelta.x
