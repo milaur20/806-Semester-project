@@ -1620,6 +1620,14 @@ PrefabInstance:
       propertyPath: infoAnimations.Array.data[2]
       value: 
       objectReference: {fileID: 1657837743}
+    - target: {fileID: 3429194724363149777, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1955
+      objectReference: {fileID: 0}
+    - target: {fileID: 3429194724363149777, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -17.482
+      objectReference: {fileID: 0}
     - target: {fileID: 6735488794880920742, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: m_Pivot.x
       value: 0

@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2711, y: -29.933136}
-  m_SizeDelta: {x: 1144.8494, y: 1930.0619}
+  m_AnchoredPosition: {x: -16.851, y: 3.06}
+  m_SizeDelta: {x: 1113.7, y: 1972.7587}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4217973770064371350
 CanvasRenderer:
@@ -309,7 +309,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5384589428303382562}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -409,6 +409,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -769,6 +781,8 @@ MonoBehaviour:
   - {fileID: 86310780858295815}
   - {fileID: 9095612289690799163}
   infoscreen: {fileID: 0}
+  looping: 1
+  currentAnimationIndex: 0
 --- !u!223 &3161239855390156359
 Canvas:
   m_ObjectHideFlags: 0
@@ -822,7 +836,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8901004822999791955}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
