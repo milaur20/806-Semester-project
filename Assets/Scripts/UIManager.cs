@@ -11,7 +11,9 @@ public class UIManager : MonoBehaviour
     public Image[] dotMenus;
     public GameObject infoscreen;
 
-    private int currentAnimationIndex = 0;
+    public bool looping;
+
+    public int currentAnimationIndex = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,17 @@ public class UIManager : MonoBehaviour
     }
     void Update()
     {
+        
+    }
+
+    public void QRButtonClick()
+    {
+        SceneManager.LoadScene("ImageTrackingWithMultiplePrefabs");
+    }
+
+    public void GlobalInfoClick()
+    {
+        /*
         // Check if there's any touch input
         if (Input.touchCount > 0)
         {
@@ -38,6 +51,7 @@ public class UIManager : MonoBehaviour
                         // Handle the single tap here
                         //Debug.Log("Single tap detected!");
                         GlobalInfoClick();
+                        
                     }
                 }
             }
@@ -46,15 +60,7 @@ public class UIManager : MonoBehaviour
         {
             GlobalInfoClick();
         }
-    }
-
-    public void QRButtonClick()
-    {
-        SceneManager.LoadScene("ImageTrackingWithMultiplePrefabs");
-    }
-
-    public void GlobalInfoClick()
-    {
+        */
         Debug.Log(currentAnimationIndex);
         // Increment the currentAnimationIndex by 1
         currentAnimationIndex++;
@@ -62,9 +68,17 @@ public class UIManager : MonoBehaviour
         // Check if the currentAnimationIndex exceeds the length of infoAnimations
         if (currentAnimationIndex >= infoAnimations.Length)
         {
-            // If it does, disable the GameObject
-            gameObject.SetActive(false);
-            return; // Exit the function early to prevent accessing an out-of-bounds index
+            if (looping)
+            {
+                // If looping is enabled, reset currentAnimationIndex to 0
+                currentAnimationIndex = 0;
+            }
+            else
+            {
+                // If looping is disabled, disable the GameObject and exit the function
+                gameObject.SetActive(false);
+                return; // Exit the function early to prevent accessing an out-of-bounds index
+            }
         }
 
         // If the currentAnimationIndex is within bounds, play the next animation
