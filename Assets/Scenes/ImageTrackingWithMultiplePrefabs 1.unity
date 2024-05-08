@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 287391695}
-  m_IndirectSpecularColor: {r: 0.4446172, g: 0.4938478, b: 0.57256323, a: 1}
+  m_IndirectSpecularColor: {r: 0.4459647, g: 0.4953258, b: 0.5730464, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 143437355}
   - component: {fileID: 143437354}
   - component: {fileID: 143437351}
-  - component: {fileID: 143437357}
   - component: {fileID: 143437358}
   m_Layer: 0
   m_Name: XR Origin
@@ -158,8 +157,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PrefabsList:
   - imageGuid: 60cb84e8-2758-47f9-ad8b-c702821b9658
-    imagePrefab: {fileID: 4703268225707723432, guid: ba0027c8ece8ccf41af33f1a07bf362d, type: 3}
-  - imageGuid: 669d3adf-841d-46e3-95d8-37ee78d6eecf
     imagePrefab: {fileID: 4495475197385156684, guid: 41f9fdb0849f0784f8f4d08aa1fc2800, type: 3}
   instantiatedPrefab: {fileID: 0}
   m_ImageLibrary: {fileID: 11400000, guid: c86e375d7e7430442a1104e88fa21f21, type: 2}
@@ -211,19 +208,6 @@ Transform:
   - {fileID: 1426237014}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &143437357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 143437350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6d5323815f004189af1fb658b6c9369, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AlternativePrefab: {fileID: 8682790842898555120, guid: a34fff2b4f91f438197886db4a364e3e, type: 3}
 --- !u!114 &143437358
 MonoBehaviour:
   m_ObjectHideFlags: 0

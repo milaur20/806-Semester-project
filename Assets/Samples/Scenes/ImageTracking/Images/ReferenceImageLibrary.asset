@@ -27,13 +27,3 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: QRCode
     m_Texture: {fileID: 2800000, guid: a6fd8503774c0402aa403884f5b77f39, type: 3}
-  - m_SerializedGuid:
-      m_GuidLow: 5108071664178772703
-      m_GuidHigh: 14983148825189275797
-    m_SerializedTextureGuid:
-      m_GuidLow: 5193891951160293259
-      m_GuidHigh: 10184733053004423432
-    m_Size: {x: 1, y: 0.99863297}
-    m_SpecifySize: 1
-    m_Name: Coin 13
-    m_Texture: {fileID: 2800000, guid: 0eab778b693648140821822cc070578d, type: 3}

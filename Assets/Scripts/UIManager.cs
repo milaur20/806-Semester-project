@@ -42,6 +42,10 @@ public class UIManager : MonoBehaviour
                 }
             }
         }
+        if(Input.GetMouseButtonDown(0))
+        {
+            GlobalInfoClick();
+        }
     }
 
     public void QRButtonClick()
