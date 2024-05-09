@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public enum FocusedState
     {
@@ -18,14 +19,12 @@ public class FocusManager : MonoBehaviour
     private Touch touch;
 
     private GameObject target;
-
+    private bool switch1;
     private float speedModifier = 0.1f;
     private Vector2 previousTouchPosition;
     public float offset = 1.0f;
     private GameObject backgroundMaskObj;
-    [SerializeField] private Sprite background;
 
-    public GameObject lastFocusedObject;
     private float lastClickTime;
     private float doubleClickTimeThreshold = 0.2f; // Adjust as needed
     private GameObject lastClickedObject;
@@ -71,12 +70,19 @@ public class FocusManager : MonoBehaviour
         {
             originalPos = focusedObject.transform.position;
         }
-        backgroundMaskObj.SetActive(true);
-    
-        backgroundMaskObj.GetComponent<Renderer>().material = focusedObject.GetComponent<MedalBehavior>().background;
+        Debug.Log(focusedObject.transform.parent.name+" "+"background");
+        Debug.Log("M7(Clone) background");
+        //Debug.Log("Background Mask: " + backgroundMaskObj);
 
-        focusedObject.transform.SetParent(Camera.main.transform);
-        focusedObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * offset;
+        //find object with name M7(Clone) background
+        GameObject.Find(focusedObject.name + " background").SetActive(true);
+
+        if(focusedObject.transform.parent != Camera.main.transform)
+        {
+            focusedObject.transform.SetParent(Camera.main.transform);
+            focusedObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * offset;
+        }
+        Debug.Log("hallo");
         detectDoubleTap();
     }
 
@@ -87,6 +93,7 @@ public class FocusManager : MonoBehaviour
         currentState = FocusedState.idle;
         unFocusedObject.transform.position = originalPos;
         originalPos = Vector3.zero;
+        GameObject.Find(unFocusedObject.name + " background").SetActive(false);
         backgroundMaskObj.SetActive(false);
     }
 
@@ -129,11 +136,15 @@ public class FocusManager : MonoBehaviour
                         if(currentState == FocusedState.focused)
                         {
                             target = hit.collider.gameObject;
+                            Debug.Log("Target: " + target);
+                            Debug.Log("Switching state to unfocused");
                             currentState = FocusedState.unfocused;
                         }
                         else
                         {
                             target = hit.collider.gameObject;
+                            Debug.Log("Target: " + target);
+                            Debug.Log("Switching state to focused");
                             currentState = FocusedState.focused;
                         }
                         clickCount = 0; // Reset click count

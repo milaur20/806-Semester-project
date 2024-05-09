@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56f7def3ce3ef064299badc6d1a33752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 2100000, guid: 4f704b2acd39cd343b32a39f289a1a1c, type: 2}
+  background: {fileID: 2100000, guid: ec8a7be73352e7e45bd2d23387e7c258, type: 2}
 --- !u!1001 &8369295797437760008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114,6 +114,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
+      propertyPath: m_TagString
+      value: Medal
+      objectReference: {fileID: 0}
     - target: {fileID: 1399588999694661154, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -132,7 +136,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 161957936961732510}
+      addedObject: {fileID: 3354865579216371256}
   m_SourcePrefab: {fileID: 100100000, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
 --- !u!4 &8335898280362763747 stripped
 Transform:
@@ -144,16 +148,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
   m_PrefabInstance: {fileID: 8369295797437760008}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &161957936961732510
-MonoBehaviour:
+--- !u!65 &3354865579216371256
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8711333863781023577}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56f7def3ce3ef064299badc6d1a33752, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 2, y: 0.1, z: 2}
+  m_Center: {x: 0, y: 0.05, z: 0}
