@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4968481839134536646}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: 76
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 121009842a2ef4d4d9900d26f42137cb, type: 2}
+    - target: {fileID: -4630904825538409021, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -2331861343774156183, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -91,6 +95,22 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
       propertyPath: m_Name
       value: Coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
+      propertyPath: m_TagString
+      value: Medal
+      objectReference: {fileID: 0}
+    - target: {fileID: 1399588999694661154, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2326927414867003374, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8214794797270158177, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -132,7 +152,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -150,3 +170,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56f7def3ce3ef064299badc6d1a33752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 1
+  background: {fileID: 21300000, guid: e4a863dd390e40140bc1986506939b74, type: 3}

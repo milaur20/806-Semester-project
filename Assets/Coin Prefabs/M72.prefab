@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4968481839134536646}
   m_Layer: 0
-  m_Name: Coin 7
+  m_Name: M72
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ PrefabInstance:
     - target: {fileID: -2331861343774156183, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: b1d6a252bdff4a842b6d240f7d9accad, type: 2}
+      objectReference: {fileID: 2100000, guid: b86562ae5f8f6ac4b80cf77f24c24cdb, type: 2}
     - target: {fileID: 919132149155446097, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
       propertyPath: m_Name
       value: Coin
@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: 8214794797270158177, guid: 21b5450b7c3d28645a42ca27da8952ee, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 413506a9b42db714aa967b72148c2c32, type: 2}
+      objectReference: {fileID: 2100000, guid: df804cf33135de141b9e73116954be9d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

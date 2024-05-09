@@ -1,13 +1,21 @@
 using UnityEngine;
 
-public class OnefingerRotate : MonoBehaviour
+public class MedalBehavior : MonoBehaviour
 {
     private Touch touch;
     private float speedModifier = 0.1f;
     private Vector2 previousTouchPosition;
+    public Material background;
+    private GameObject obj;
+    private void Start()
+    {
+        //put only child of this object into variable
+        obj = transform.GetChild(0).gameObject;
+    }
 
     void Update()
     {
+        
         if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
@@ -22,11 +30,13 @@ public class OnefingerRotate : MonoBehaviour
                 Quaternion xRotation = Quaternion.Euler(touchDeltaPosition.y * speedModifier, 0f, 0f);
 
                 // Apply rotations in world space
-                transform.rotation = yRotation * xRotation * transform.rotation;
+                obj.transform.rotation = yRotation * xRotation * obj.transform.rotation;
             }
+
+            
+        }
 
             // Update the previous touch position for the next frame
             previousTouchPosition = touch.position;
         }
     }
-}
