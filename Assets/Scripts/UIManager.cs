@@ -9,18 +9,18 @@ public class UIManager : MonoBehaviour
 {
     public GameObject[] infoAnimations;
     public Image[] dotMenus;
-    public GameObject infoscreen;
+    //public GameObject infoscreen;
 
     public bool looping;
 
-    public int currentAnimationIndex = 0;
+    private int currentAnimationIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         // Set the initial animation to play
         PlayAnimation(0);
-        infoscreen = GameObject.Find("InfoScreen");
+        //infoscreen = GameObject.Find("InfoScreen");
 
     }
     void Update()
