@@ -111,4 +111,5 @@ public class UIManager : MonoBehaviour
     public void ClickEnglish(){
         SceneManager.LoadScene("StartInfo_EN");
     }
+
 }
