@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections.ObjectModel;
 
 public class UIManager : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class UIManager : MonoBehaviour
     public bool looping;
 
     private int currentAnimationIndex = 0;
+
+    public Canvas InfoScreen; 
 
     // Start is called before the first frame update
     void Start()
@@ -112,4 +115,26 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("StartInfo_EN");
     }
 
+    public void CollectionButtonClick(){
+// Find the canvas GameObject with the name "InfoScreen"
+        GameObject infoScreenCanvas = GameObject.Find("InfoScreen");
+
+        if (infoScreenCanvas != null)
+        {
+            // Find all child GameObjects with the tag "collection" under the canvas
+            Transform[] collectionObjects = infoScreenCanvas.GetComponentsInChildren<Transform>(true);
+
+            // Activate all found collection objects
+            foreach (Transform obj in collectionObjects)
+            {
+                if (obj.CompareTag("collection"))
+                {
+                    obj.gameObject.SetActive(true);
+                    Debug.Log("Infoscreen canvas was accessed yay");
+                }
+            }
+        }
+    }
 }
+
+
