@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MedalBehavior : MonoBehaviour
@@ -7,6 +9,8 @@ public class MedalBehavior : MonoBehaviour
     private Vector2 previousTouchPosition;
     public Material background;
     private GameObject obj;
+    public List<string> textList;
+    public Sprite sprite;
     private void Start()
     {
         //put only child of this object into variable

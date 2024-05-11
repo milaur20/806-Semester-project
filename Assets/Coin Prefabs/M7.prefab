@@ -46,6 +46,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 2100000, guid: ec8a7be73352e7e45bd2d23387e7c258, type: 2}
+  textList:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  sprite: {fileID: 21300000, guid: d2d941c9811a98c4f8b7d1165e74e46a, type: 3}
 --- !u!1001 &8369295797437760008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -184,3 +193,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ff83006dbab9249a37ee121745467d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  backgroundMaskName: 
