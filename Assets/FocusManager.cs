@@ -14,6 +14,9 @@ public enum FocusedState
     }
 public class FocusManager : MonoBehaviour
 {
+    private GameObject oldParent;
+    GameObject backgroundMask;
+    public string backgroundMaskName;
     public Vector3 originalPos;
     public bool somethingIsFocused;
     private Touch touch;
@@ -66,35 +69,69 @@ public class FocusManager : MonoBehaviour
     private void Focus(GameObject focusedObject)
     {
         Debug.Log("Focusing on object");
-        if(originalPos == Vector3.zero)
+        
+        // Save the original position if it's not already saved
+        if (originalPos == Vector3.zero)
         {
             originalPos = focusedObject.transform.position;
         }
-        Debug.Log(focusedObject.transform.parent.name+" "+"background");
-        Debug.Log("M7(Clone) background");
-        //Debug.Log("Background Mask: " + backgroundMaskObj);
-
-        //find object with name M7(Clone) background
-        GameObject.Find(focusedObject.name + " background").SetActive(true);
-
+        backgroundMaskName = focusedObject.GetComponent<BackgroundMaskData>().backgroundMaskName;
+        Debug.Log("BUH");
+        // Activate the background mask associated with the focused object
         if(focusedObject.transform.parent != Camera.main.transform)
         {
+            Debug.Log(focusedObject.transform.parent+" + "+Camera.main.transform);
+            Debug.Log(focusedObject);
+            Debug.Log(focusedObject.transform.parent);
+            Debug.Log(focusedObject.transform.parent.gameObject);
+            Debug.Log(focusedObject.transform.parent.gameObject.name);
+            backgroundMask = GameObject.Find(focusedObject.transform.parent.gameObject.name+" background");
+        }
+        //check if the background mask gameobject is enabled
+        Debug.Log(backgroundMask);
+        if (!backgroundMask.GetComponent<MeshRenderer>().enabled)
+        {
+            backgroundMask.GetComponent<MeshRenderer>().enabled = true;
+        }
+        else
+        {
+            Debug.LogWarning("Background mask not found for " + focusedObject.transform.parent.gameObject.name);
+        }
+
+        // Move the object to the camera's position with an offset
+        if (focusedObject.transform.parent != Camera.main.transform)
+        {
+            oldParent = focusedObject.transform.parent.gameObject;
             focusedObject.transform.SetParent(Camera.main.transform);
             focusedObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * offset;
         }
-        Debug.Log("hallo");
         detectDoubleTap();
     }
 
     private void Unfocus(GameObject unFocusedObject)
     {
         Debug.Log("LetGoMedal");
-        unFocusedObject.transform.SetParent(null);
-        currentState = FocusedState.idle;
+        Debug.Log("Line 1");
+        unFocusedObject.transform.SetParent(oldParent.transform);
+        Debug.Log("Line 2");
         unFocusedObject.transform.position = originalPos;
+        Debug.Log("Line 3");
         originalPos = Vector3.zero;
-        GameObject.Find(unFocusedObject.name + " background").SetActive(false);
-        backgroundMaskObj.SetActive(false);
+        Debug.Log("Line 4");
+        Debug.Log(oldParent.name);
+
+        backgroundMask = GameObject.Find(oldParent.name+" background");
+        Debug.Log("Line 5");
+        if (backgroundMask.GetComponent<MeshRenderer>().enabled == true)
+        {
+            backgroundMask.GetComponent<MeshRenderer>().enabled = false;
+        }
+        else
+        {
+            Debug.LogWarning("Background mask not found for " + unFocusedObject.transform.parent.gameObject.name);
+        }
+        currentState = FocusedState.idle;
+        //backgroundMaskObj.SetActive(false);
     }
 
     private void idle()

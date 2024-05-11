@@ -32,8 +32,6 @@ public class MedalBehavior : MonoBehaviour
                 // Apply rotations in world space
                 obj.transform.rotation = yRotation * xRotation * obj.transform.rotation;
             }
-
-            
         }
 
             // Update the previous touch position for the next frame
