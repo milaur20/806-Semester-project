@@ -10,7 +10,7 @@ public class MedalBehavior : MonoBehaviour
     public Material background;
     private GameObject obj;
     public List<string> textList;
-    public Sprite sprite;
+    public Texture texture;
     private void Start()
     {
         //put only child of this object into variable

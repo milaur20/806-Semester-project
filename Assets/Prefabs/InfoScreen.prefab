@@ -1114,7 +1114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8545158172321301935}
   - component: {fileID: 9090010619789981659}
-  - component: {fileID: 3443147349895785902}
+  - component: {fileID: 4146790724273481246}
   m_Layer: 5
   m_Name: coin1
   m_TagString: Untagged
@@ -1149,7 +1149,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5789830302784490821}
   m_CullTransparentMesh: 1
---- !u!114 &3443147349895785902
+--- !u!114 &4146790724273481246
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1626,6 +1626,7 @@ MonoBehaviour:
   - {fileID: 86310780858295815}
   - {fileID: 9095612289690799163}
   looping: 1
+  InfoScreen: {fileID: 0}
 --- !u!223 &3161239855390156359
 Canvas:
   m_ObjectHideFlags: 0

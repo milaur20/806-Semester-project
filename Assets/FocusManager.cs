@@ -22,11 +22,12 @@ public class FocusManager : MonoBehaviour
     private Touch touch;
 
     private GameObject target;
-    private bool switch1;
+    public GameObject infoScreen;
     private float speedModifier = 0.1f;
     private Vector2 previousTouchPosition;
+    private GameObject previousObject;
     public float offset = 1.0f;
-    private GameObject backgroundMaskObj;
+    public GameObject backgroundMaskObj;
 
     private float lastClickTime;
     private float doubleClickTimeThreshold = 0.2f; // Adjust as needed
@@ -39,8 +40,10 @@ public class FocusManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("FocusManager started");
         backgroundMaskObj = GameObject.Find("Background Mask");
-        backgroundMaskObj.SetActive(false);
+        infoScreen = GameObject.Find("InfoScreen");
+        Debug.Log("InfoScreen: " + infoScreen);
     }
 
     // Update is called once per frame
@@ -75,7 +78,7 @@ public class FocusManager : MonoBehaviour
         {
             originalPos = focusedObject.transform.position;
         }
-        backgroundMaskName = focusedObject.GetComponent<BackgroundMaskData>().backgroundMaskName;
+        //backgroundMaskName = focusedObject.GetComponent<BackgroundMaskData>().backgroundMaskName;
         Debug.Log("BUH");
         // Activate the background mask associated with the focused object
         if(focusedObject.transform.parent != Camera.main.transform)
@@ -85,7 +88,8 @@ public class FocusManager : MonoBehaviour
             Debug.Log(focusedObject.transform.parent);
             Debug.Log(focusedObject.transform.parent.gameObject);
             Debug.Log(focusedObject.transform.parent.gameObject.name);
-            backgroundMask = GameObject.Find(focusedObject.transform.parent.gameObject.name+" background");
+            Debug.Log(focusedObject.name+" background");
+            backgroundMask = GameObject.Find(focusedObject.name+" background");
         }
         //check if the background mask gameobject is enabled
         Debug.Log(backgroundMask);
@@ -105,6 +109,7 @@ public class FocusManager : MonoBehaviour
             focusedObject.transform.SetParent(Camera.main.transform);
             focusedObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * offset;
         }
+        infoScreen.GetComponentsInChildren<CollectionBehaviour>()[0].AddToCollection(focusedObject);
         detectDoubleTap();
     }
 
@@ -118,9 +123,9 @@ public class FocusManager : MonoBehaviour
         Debug.Log("Line 3");
         originalPos = Vector3.zero;
         Debug.Log("Line 4");
-        Debug.Log(oldParent.name);
+        //Debug.Log(oldParent.name);
 
-        backgroundMask = GameObject.Find(oldParent.name+" background");
+        backgroundMask = GameObject.Find(unFocusedObject.name+" background");
         Debug.Log("Line 5");
         if (backgroundMask.GetComponent<MeshRenderer>().enabled == true)
         {
@@ -172,14 +177,14 @@ public class FocusManager : MonoBehaviour
                     {
                         if(currentState == FocusedState.focused)
                         {
-                            target = hit.collider.gameObject;
+                            target = hit.collider.gameObject.transform.parent.gameObject;
                             Debug.Log("Target: " + target);
                             Debug.Log("Switching state to unfocused");
                             currentState = FocusedState.unfocused;
                         }
                         else
                         {
-                            target = hit.collider.gameObject;
+                            target = hit.collider.gameObject.transform.parent.gameObject;
                             Debug.Log("Target: " + target);
                             Debug.Log("Switching state to focused");
                             currentState = FocusedState.focused;
