@@ -1006,6 +1006,7 @@ MonoBehaviour:
   infoScreen: {fileID: 0}
   offset: 1
   backgroundMaskObj: {fileID: 0}
+  debugging: 0
 --- !u!4 &1576169444
 Transform:
   m_ObjectHideFlags: 0
@@ -1452,9 +1453,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 709053404746514186, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1853633783973043639, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1890586009204372016, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2349112365009945707, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: m_IsActive
@@ -1472,9 +1481,21 @@ PrefabInstance:
       propertyPath: infoAnimations.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2716387683527265409, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2882533945687990254, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4146790724273481246, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4706925503916087363, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5384589428303382562, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: m_IsActive
@@ -1560,13 +1581,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7248341142740340576, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7874384659115578345, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7874384659115578345, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: m_TagString
       value: collection
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099988098016412285, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513319477435924848, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8696096417416189557, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: m_Colors.m_PressedColor.b
