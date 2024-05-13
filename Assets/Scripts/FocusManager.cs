@@ -107,6 +107,7 @@ public class FocusManager : MonoBehaviour
             }
             oldParent = focusedObject.transform.parent.gameObject;
             focusedObject.transform.SetParent(Camera.main.transform);
+            focusedObject.GetComponentInChildren<Canvas>().enabled = false;
             focusedObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * offset;
         }
         if(debugging)
@@ -120,6 +121,7 @@ public class FocusManager : MonoBehaviour
     private void Unfocus(GameObject unFocusedObject)
     {
         unFocusedObject.transform.SetParent(oldParent.transform);
+        unFocusedObject.GetComponentInChildren<Canvas>().enabled = enabled;
         unFocusedObject.transform.position = originalPos;
         originalPos = Vector3.zero;
 
