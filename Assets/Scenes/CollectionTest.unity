@@ -1003,7 +1003,9 @@ MonoBehaviour:
   backgroundMaskName: 
   originalPos: {x: 0, y: 0, z: 0}
   somethingIsFocused: 0
+  infoScreen: {fileID: 0}
   offset: 1
+  backgroundMaskObj: {fileID: 0}
 --- !u!4 &1576169444
 Transform:
   m_ObjectHideFlags: 0
@@ -1462,6 +1464,14 @@ PrefabInstance:
       propertyPath: InfoScreen
       value: 
       objectReference: {fileID: 1126257785}
+    - target: {fileID: 2417705693292934535, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: dotMenus.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417705693292934535, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
+      propertyPath: infoAnimations.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2882533945687990254, guid: d4821a53d43965e4887c617cb793be0a, type: 3}
       propertyPath: m_IsActive
       value: 0
