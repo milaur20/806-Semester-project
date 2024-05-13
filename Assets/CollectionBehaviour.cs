@@ -10,6 +10,8 @@ public class CollectionBehaviour : MonoBehaviour
 
     private GameObject currentSlot;
 
+    [SerializeField] private bool debugging;
+
     void Start()
     {
         // Find and assign each slot with a corresponding slot GameObject
@@ -19,11 +21,17 @@ public class CollectionBehaviour : MonoBehaviour
             if (slot != null)
             {
                 slots[i] = slot;
-                Debug.Log("Assigned " + slot.name + " to slot " + (i + 1));
+                if(debugging)
+                {
+                    Debug.Log("Assigned " + slot.name + " to slot " + (i + 1));
+                }
             }
             else
             {
-                Debug.LogError("Slot not found for slot " + (i + 1));
+                if(debugging)
+                {
+                    Debug.LogError("Slot not found for slot " + (i + 1));
+                }
             }
         }
     }
@@ -36,9 +44,14 @@ public class CollectionBehaviour : MonoBehaviour
             {
                 if (obj != null)
                 {
-                    Debug.Log("Updating " + obj.name);
+                    if(debugging)
+                    {
+                        Debug.Log("Updating " + obj.name);
+                    }
+
                     //get the texture variable of the object, and assign it to the slots texture
                     slots[collection.IndexOf(obj)].GetComponent<RawImage>().texture = obj.GetComponent<MedalBehavior>().texture;
+
                     //Update the text of the object
                     //obj.GetComponentInChildren<TextMesh>().text = textList[collection.IndexOf(obj)];
                     
@@ -49,14 +62,21 @@ public class CollectionBehaviour : MonoBehaviour
 
     public void AddToCollection(GameObject obj)
     {
-        Debug.Log("Adding " + obj.name + " to collection");
+        if(debugging)
+        {
+            Debug.Log("Adding " + obj.name + " to collection");
+        }
+        
         //check if object is already in collection
         if (collection.Contains(obj))
         {
-            Debug.LogWarning(obj.name + " is already in collection");
+            if(debugging)
+            {
+                Debug.LogWarning(obj.name + " is already in collection");
+            }
+            
             return;
         }
-        Debug.Log("ALLO");
         collection.Add(obj);
         //collection.OrderBy(go => go.name).ToList();
     }

@@ -2723,7 +2723,7 @@ MonoBehaviour:
   originalPos: {x: 0, y: 0, z: 0}
   somethingIsFocused: 0
   infoScreen: {fileID: 0}
-  offset: 1
+  offset: 1.5
   backgroundMaskObj: {fileID: 0}
 --- !u!4 &1778414908
 Transform:

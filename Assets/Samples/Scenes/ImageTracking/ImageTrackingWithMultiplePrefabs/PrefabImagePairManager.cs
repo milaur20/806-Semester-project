@@ -55,7 +55,10 @@ namespace UnityEngine.XR.ARFoundation.Samples
             get => m_ImageLibrary;
             set => m_ImageLibrary = value;
         }
-
+        void Start()
+        {
+            Vibration.Init();
+        }
         public void OnBeforeSerialize()
         {
             m_PrefabsList.Clear();
@@ -104,6 +107,7 @@ namespace UnityEngine.XR.ARFoundation.Samples
         {
             if (m_PrefabsDictionary.TryGetValue(trackedImage.referenceImage.guid, out var prefab))
             {
+                Vibration.VibrateNope();
                 m_Instantiated[trackedImage.referenceImage.guid] = Instantiate(prefab, trackedImage.transform);
                 instantiatedPrefab = m_Instantiated[trackedImage.referenceImage.guid];
             }
