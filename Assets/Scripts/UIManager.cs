@@ -33,7 +33,7 @@ public class UIManager : MonoBehaviour
 
     public void QRButtonClick()
     {
-        SceneManager.LoadScene("ImageTrackingWithMultiplePrefabs");
+        SceneManager.LoadScene("ImageTrackingWithMultiplePrefabs 1");
     }
 
     public void GlobalInfoClick()
@@ -115,25 +115,25 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("StartInfo_EN");
     }
 
-    public void CollectionButtonClick(){
-// Find the canvas GameObject with the name "InfoScreen"
-        GameObject infoScreenCanvas = GameObject.Find("InfoScreen");
+public void CollectionButtonClick(){
+    // Find the canvas GameObject with the name "InfoScreen"
+    GameObject infoScreenCanvas = GameObject.Find("InfoScreen");
 
-        if (infoScreenCanvas != null)
+    if (infoScreenCanvas != null)
+    {
+        // Find all child GameObjects with the tag "collection" under the canvas
+        Transform[] collectionObjects = infoScreenCanvas.GetComponentsInChildren<Transform>(true);
+
+        // Toggle the active state of all found collection objects
+        foreach (Transform obj in collectionObjects)
         {
-            // Find all child GameObjects with the tag "collection" under the canvas
-            Transform[] collectionObjects = infoScreenCanvas.GetComponentsInChildren<Transform>(true);
-
-            // Activate all found collection objects
-            foreach (Transform obj in collectionObjects)
+            if (obj.CompareTag("collection"))
             {
-                if (obj.CompareTag("collection"))
-                {
-                    obj.gameObject.SetActive(true);
-                    Debug.Log("Infoscreen canvas was accessed yay");
-                }
+                obj.gameObject.SetActive(!obj.gameObject.activeSelf);
+                Debug.Log("Infoscreen canvas was accessed yay");
             }
         }
+    }
     }
 }
 
