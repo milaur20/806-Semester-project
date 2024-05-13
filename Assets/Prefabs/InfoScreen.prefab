@@ -400,8 +400,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2417705693292934535}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+      - m_Target: {fileID: 8489969339819235496}
+        m_TargetAssemblyTypeName: InfoScreenManager, Assembly-CSharp
         m_MethodName: CollectionButtonClick
         m_Mode: 1
         m_Arguments:
@@ -887,11 +887,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6735488794880920742}
-  - component: {fileID: 2417705693292934535}
   - component: {fileID: 3161239855390156359}
   - component: {fileID: 920420166858078033}
   - component: {fileID: 4430319689010943486}
   - component: {fileID: 7774979070904807575}
+  - component: {fileID: 8489969339819235496}
   m_Layer: 5
   m_Name: InfoScreen
   m_TagString: Untagged
@@ -920,28 +920,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2417705693292934535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8901004822999791955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d53a6afd5ceafb141bb50c70760017ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  infoAnimations:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  dotMenus:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  looping: 1
-  InfoScreen: {fileID: 3161239855390156359}
 --- !u!223 &3161239855390156359
 Canvas:
   m_ObjectHideFlags: 0
@@ -1026,3 +1004,16 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1080, y: 1920, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8489969339819235496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8901004822999791955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfdb4c8a2e85684a8793cd68d98b886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InfoScreen: {fileID: 3161239855390156359}

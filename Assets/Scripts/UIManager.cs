@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour
 
     public bool looping;
 
+    private bool imagesEnabled = false; // Variable to track the state of the images
+
     private int currentAnimationIndex = 0;
 
     public Canvas InfoScreen; 
@@ -115,25 +117,42 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("StartInfo_EN");
     }
 
-public void CollectionButtonClick(){
-    // Find the canvas GameObject with the name "InfoScreen"
-    GameObject infoScreenCanvas = GameObject.Find("InfoScreen");
-
-    if (infoScreenCanvas != null)
+        public void CollectionButtonClick()
     {
-        // Find all child GameObjects with the tag "collection" under the canvas
-        Transform[] collectionObjects = infoScreenCanvas.GetComponentsInChildren<Transform>(true);
+        // Find the canvas GameObject with the name "InfoScreen"
+        GameObject infoScreenCanvas = GameObject.Find("InfoScreen");
 
-        // Toggle the active state of all found collection objects
-        foreach (Transform obj in collectionObjects)
+        if (infoScreenCanvas != null)
         {
-            if (obj.CompareTag("collection"))
+            // Find the parent GameObject with the tag "collection" under the canvas
+            GameObject collectionObject = GameObject.FindGameObjectWithTag("collection");
+
+            // Toggle the Image components of the collection object and its children
+            if (collectionObject != null)
             {
-                obj.gameObject.SetActive(!obj.gameObject.activeSelf);
-                Debug.Log("Infoscreen canvas was accessed yay");
+                ToggleImages(collectionObject);
             }
+
+            // Update the state for the next button click
+            imagesEnabled = !imagesEnabled;
         }
     }
+
+    // Toggle the enabled state of Image components recursively
+    private void ToggleImages(GameObject obj)
+    {
+        // Toggle the enabled state of Image components on the current object
+        Image image = obj.GetComponent<Image>();
+        if (image != null)
+        {
+            image.enabled = !imagesEnabled;
+        }
+
+        // Recursively toggle the enabled state of Image components on children
+        foreach (Transform child in obj.transform)
+        {
+            ToggleImages(child.gameObject);
+        }
     }
 }
 
