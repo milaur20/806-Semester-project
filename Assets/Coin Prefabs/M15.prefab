@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 0}
-  textList: []
+  textList:
+  - "I 1826 formgav Thorvaldsens h\xE6nder en hyldest til Andrea Appiani ved at designe
+    kunstv\xE6rket p\xE5 hans monument."
+  - "Den gyldne medaljon, Appianis frosne blik i relief, fanger malerens sj\xE6l."
+  - " Gennem tiden m\xF8dtes to neoklassiske mestre ikke personligt, men i kunstens
+    evige omfavnelse, deres f\xE6lles k\xE6rlighed for kunsten genlyder gennem nyklassicismens
+    historie."
   texture: {fileID: 0}
 --- !u!1001 &8369295797437760008
 PrefabInstance:

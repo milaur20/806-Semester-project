@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 0}
-  textList: []
+  textList:
+  - "Midt i Roms evige byggesten rejste Fabrica Nueva sig, et symbol p\xE5 fremskridt."
+  - "Pave Gregor XVI, traditionens vogter, s\xE5 til, mens fundamentet for fremtiden
+    blev lagt."
+  - "M\xF8nterne med pavens ansigt og Fabrica Nueva p\xE5, klingede i romerske lommer,
+    mens de sammenkoblede ekkoerne fra de gamle romerske stier med nye, og moderne
+    skridt."
   texture: {fileID: 0}
 --- !u!1001 &8369295797437760008
 PrefabInstance:

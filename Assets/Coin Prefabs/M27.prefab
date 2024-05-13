@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 0}
-  textList: []
+  textList:
+  - " I hjertet af Rom forvandlede pave Innocens XII Berninis vision til Palazzo
+    del Monte Citorio, et retf\xE6rdighedens bastion over nepotisme."
+  - "Engang fors\xF8gt stoppet, rejste palasset sig p\xE5 ny, senere med lovsale
+    og som politikske instans."
+  - "Placeret p\xE5 det historiske Mons Citatorius, en bakke der ekkoer den antikke
+    romerske kulturarv."
   texture: {fileID: 0}
 --- !u!1001 &8369295797437760008
 PrefabInstance:

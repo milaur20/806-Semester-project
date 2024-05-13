@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 0}
-  textList: []
+  textList:
+  - " I hjertet af Vatikanstaten flettede Pave Gregor XVI's vision sig ind i troens
+    v\xE6v."
+  - "Hans usete n\xE6rv\xE6r, en stille vogter af traditionen, genl\xF8d gennem vertikanets
+    evigt udviklende korridorer."
+  - "Religionen, hans kompas, vejledte ham, mens han f\xF8rte Kirken gennem den fine
+    balancegang mellem modernitet og tro."
   texture: {fileID: 0}
 --- !u!1001 &8369295797437760008
 PrefabInstance:

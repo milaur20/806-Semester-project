@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 0}
-  textList: []
+  textList:
+  - " I hjertet af K\xF8benhavn l\xE5 en gylden medalje i Thorvaldsens h\xE5ndflade,
+    Kong Frederik V's ansigt str\xE5lede."
+  - "Geniusen p\xE5 bagsiden, en muse for kunstnere, hviskede om kreativitetens evige
+    dans, velsigner Thorvaldsens kunstv\xE6rker."
+  - "Medaljen, en bro mellem monark og skulpt\xF8r, var en stille dedikation til
+    Danmarks vedvarende romance med kunstens verden."
   texture: {fileID: 0}
 --- !u!1001 &8369295797437760008
 PrefabInstance:

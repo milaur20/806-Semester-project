@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 0}
-  textList: []
+  textList:
+  - " I hjertet af Rom summede postkontoret p\xE5 Piazza Colonna med hvisken om forandring. "
+  - "Pave Gregor XVI, et ansigt af tradition prydede m\xF8nterne som klingede i lommerne
+    p\xE5 byens indbyggere."
+  - "Inden for disse mure fl\xF8j breve afsted, med et net af modernitet, som Gregor
+    XVI forsigtigt betr\xE5dte, som var broen mellem den gamle- og  nye verden med
+    dets bl\xE6k og tro. "
   texture: {fileID: 0}
 --- !u!1001 &8369295797437760008
 PrefabInstance:

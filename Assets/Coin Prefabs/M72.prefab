@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 0}
-  textList: []
+  textList:
+  - "Under den store kupel i Peterskirken n\xE6rmer pave Leo XII sig den Hellige
+    D\xF8r."
+  - "Den troende folkem\xE6nge bliver stille, da han r\xE6kker h\xE5nden ud, og med
+    en gestus lukker d\xF8ren i, hvilket markerer afslutningen p\xE5 jubel\xE5ret."
+  - "I dette \xF8jeblik forsegles barmhjertighedens arv, som giver genlyd til evig
+    tid. "
   texture: {fileID: 0}
 --- !u!1001 &8369295797437760008
 PrefabInstance:

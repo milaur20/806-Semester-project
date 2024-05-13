@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 0}
-  textList: []
+  textList:
+  - "I et rige, hvor tro former sk\xE6bner, stod Pave Pius VIII som et fyrt\xE5rn
+    for guddommelig vejledning."
+  - "Hans regeringstid, sk\xF8nt kortvarig, var et vidnesbyrd om den evige dans mellem
+    d\xF8deligt lederskab og himmelsk vilje."
+  - " Hvert skridt en fin balance mellem jordisk styring og str\xE6ben efter \xE5ndelig
+    oplysning i religionen."
   texture: {fileID: 0}
 --- !u!1001 &8369295797437760008
 PrefabInstance:

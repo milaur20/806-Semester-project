@@ -46,7 +46,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 0}
-  textList: []
+  textList:
+  - " I det 19. \xE5rhundrede stod pave Leo XII som et fyrt\xE5rn for tradition i
+    en tid med forandring."
+  - " Hans regeringstid, kort som den var, var pr\xE6get af en inderlig hengivenhed
+    til kirkens gamle ritualer."
+  - "Inden for de hellige romerske mure i D\xE5bskappelt i Santa Maria Maggiore fandt
+    han tr\xF8st og s\xE5 i dens storhed en spejling af evigheden."
   texture: {fileID: 0}
 --- !u!1001 &8369295797437760008
 PrefabInstance:
