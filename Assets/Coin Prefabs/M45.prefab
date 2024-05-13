@@ -53,7 +53,7 @@ MonoBehaviour:
   - "M\xF8nterne med pavens ansigt og Fabrica Nueva p\xE5, klingede i romerske lommer,
     mens de sammenkoblede ekkoerne fra de gamle romerske stier med nye, og moderne
     skridt."
-  texture: {fileID: 0}
+  texture: {fileID: 2800000, guid: 4d8905f62f28dd145b19b664c31f8678, type: 3}
 --- !u!1001 &8369295797437760008
 PrefabInstance:
   m_ObjectHideFlags: 0

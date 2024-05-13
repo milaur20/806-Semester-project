@@ -53,7 +53,7 @@ MonoBehaviour:
     d\xF8deligt lederskab og himmelsk vilje."
   - " Hvert skridt en fin balance mellem jordisk styring og str\xE6ben efter \xE5ndelig
     oplysning i religionen."
-  texture: {fileID: 0}
+  texture: {fileID: 2800000, guid: 75ddf1ead2928364d9ab2f882d256ed4, type: 3}
 --- !u!1001 &8369295797437760008
 PrefabInstance:
   m_ObjectHideFlags: 0

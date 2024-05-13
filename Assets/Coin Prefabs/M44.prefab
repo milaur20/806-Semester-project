@@ -53,7 +53,7 @@ MonoBehaviour:
   - "Inden for disse mure fl\xF8j breve afsted, med et net af modernitet, som Gregor
     XVI forsigtigt betr\xE5dte, som var broen mellem den gamle- og  nye verden med
     dets bl\xE6k og tro. "
-  texture: {fileID: 0}
+  texture: {fileID: 2800000, guid: 9df59907e8249b242897e8265fad9043, type: 3}
 --- !u!1001 &8369295797437760008
 PrefabInstance:
   m_ObjectHideFlags: 0

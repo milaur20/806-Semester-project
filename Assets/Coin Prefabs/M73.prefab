@@ -53,7 +53,7 @@ MonoBehaviour:
     til kirkens gamle ritualer."
   - "Inden for de hellige romerske mure i D\xE5bskappelt i Santa Maria Maggiore fandt
     han tr\xF8st og s\xE5 i dens storhed en spejling af evigheden."
-  texture: {fileID: 0}
+  texture: {fileID: 2800000, guid: 629c4550c3737064dadcf0b589610105, type: 3}
 --- !u!1001 &8369295797437760008
 PrefabInstance:
   m_ObjectHideFlags: 0
