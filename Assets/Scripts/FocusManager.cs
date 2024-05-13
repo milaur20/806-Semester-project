@@ -27,14 +27,15 @@ public class FocusManager : MonoBehaviour
 
     void Start()
     {
+        
+        Vibration.Init();
+        backgroundMaskObj = GameObject.Find("Background Mask");
+        infoScreen = GameObject.Find("InfoScreen");
         if(debugging)
         {
             Debug.Log("FocusManager started");
             Debug.Log("InfoScreen: " + infoScreen);
         }
-        Vibration.Init();
-        backgroundMaskObj = GameObject.Find("Background Mask");
-        infoScreen = GameObject.Find("InfoScreen");
     }
 
     private void Update()
@@ -94,11 +95,23 @@ public class FocusManager : MonoBehaviour
         }
 
         // Move the object to the camera's position with an offset
+            if(debugging)
+            {
+                Debug.Log("seeing if the object is already a child of the camera");
+            }
         if (focusedObject.transform.parent != Camera.main.transform)
         {
+            if(debugging)
+            {
+                Debug.Log("Object is not a child of the camera, setting parent to camera");
+            }
             oldParent = focusedObject.transform.parent.gameObject;
             focusedObject.transform.SetParent(Camera.main.transform);
             focusedObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward * offset;
+        }
+        if(debugging)
+        {
+            Debug.Log("Adding to collection");
         }
         infoScreen.GetComponentsInChildren<CollectionBehaviour>()[0].AddToCollection(focusedObject);
         detectDoubleTap();
