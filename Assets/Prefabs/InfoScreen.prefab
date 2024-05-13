@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3429194724363149777
 RectTransform:
   m_ObjectHideFlags: 0
@@ -149,7 +149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2917757207980267502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 316403957391924104}
   - component: {fileID: 8099988098016412285}
   m_Layer: 5
-  m_Name: coin4
+  m_Name: slot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -432,7 +432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6660233619995693090
 RectTransform:
   m_ObjectHideFlags: 0
@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 3898229560417992318}
   - component: {fileID: 8513319477435924848}
   m_Layer: 5
-  m_Name: coin7
+  m_Name: slot7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,7 +580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1074320712696195877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -660,8 +660,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.34509805, g: 0.96862745, b: 0.7058824, a: 1}
+    m_PressedColor: {r: 0.34509805, g: 0.96862745, b: 0.7058824, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -681,7 +681,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9050806896106303678}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2417705693292934535}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: CollectionButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2538720429347641372
 GameObject:
   m_ObjectHideFlags: 0
@@ -694,7 +706,7 @@ GameObject:
   - component: {fileID: 1756925913841121831}
   - component: {fileID: 7248341142740340576}
   m_Layer: 5
-  m_Name: coin5
+  m_Name: slot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -766,7 +778,7 @@ GameObject:
   - component: {fileID: 1953982380895992282}
   - component: {fileID: 709053404746514186}
   m_Layer: 5
-  m_Name: coin3
+  m_Name: slot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -844,7 +856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5096425463188760149
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1116,7 +1128,7 @@ GameObject:
   - component: {fileID: 9090010619789981659}
   - component: {fileID: 4146790724273481246}
   m_Layer: 5
-  m_Name: coin1
+  m_Name: slot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1263,7 +1275,7 @@ GameObject:
   - component: {fileID: 8729688623250484040}
   - component: {fileID: 1890586009204372016}
   m_Layer: 5
-  m_Name: coin2
+  m_Name: slot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1335,7 +1347,7 @@ GameObject:
   - component: {fileID: 3996763424186035875}
   - component: {fileID: 4706925503916087363}
   m_Layer: 5
-  m_Name: coin6
+  m_Name: slot6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1481,13 +1493,14 @@ GameObject:
   - component: {fileID: 196022626455719095}
   - component: {fileID: 2251048584789581079}
   - component: {fileID: 2716387683527265409}
+  - component: {fileID: 3485012074462422746}
   m_Layer: 5
   m_Name: collection
-  m_TagString: Untagged
+  m_TagString: collection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &196022626455719095
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1553,6 +1566,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3485012074462422746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874384659115578345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31ff611c73b740940ba76a4efef72180, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collection: []
+  slots:
+  - {fileID: 5789830302784490821}
+  - {fileID: 6911031720396853022}
+  - {fileID: 4965830078802823017}
+  - {fileID: 1036923644615472659}
+  - {fileID: 2538720429347641372}
+  - {fileID: 6977444316927985522}
+  - {fileID: 2251109324659898829}
+  debugging: 0
 --- !u!1 &8901004822999791955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1661,7 @@ MonoBehaviour:
   - {fileID: 86310780858295815}
   - {fileID: 9095612289690799163}
   looping: 1
-  InfoScreen: {fileID: 0}
+  InfoScreen: {fileID: 3161239855390156359}
 --- !u!223 &3161239855390156359
 Canvas:
   m_ObjectHideFlags: 0
@@ -1821,7 +1856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2783494016943319698, guid: 4adf158126c1640ecbd52af1204f6421, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
