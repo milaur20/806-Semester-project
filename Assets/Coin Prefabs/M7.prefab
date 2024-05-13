@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4968481839134536646}
   - component: {fileID: 1243036175541879261}
-  - component: {fileID: 1513909703070814952}
   m_Layer: 6
   m_Name: M7
   m_TagString: Medal
@@ -55,22 +54,6 @@ MonoBehaviour:
   - "Iagttaget af skulpt\xF8ren markerede denne fusion af kunst og myte menneskehedens
     sj\xE6lefulde begyndelse."
   texture: {fileID: 2800000, guid: 5aef87e8c697ea84a80550e64bfbe793, type: 3}
---- !u!114 &1513909703070814952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715341976715344728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7456ae6e7dd9194b9d86f3e3b82d8ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  segmentObjects:
-  - gameObject: {fileID: 4853977408155509106}
-  - gameObject: {fileID: 0}
-  - gameObject: {fileID: 0}
 --- !u!1 &2124471585169968230
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,7 +16,7 @@ public class MedalBehavior : MonoBehaviour
     private void Start()
     {
         //put only child of this object into variable
-        obj = transform.GetChild(0).gameObject;
+        obj = GetComponentInChildren<BoxCollider>().gameObject;
         int childCount = obj.transform.childCount;
         mesh = new GameObject[childCount];
         Debug.Log("Number of children: " + childCount);
@@ -30,34 +30,26 @@ public class MedalBehavior : MonoBehaviour
     {
         if (FocusManager.currentState == FocusedState.focused)
         {
-            if (IsAnyChildInView())
+            if (Input.touchCount > 0)
             {
-                if (Input.touchCount > 0)
+                touch = Input.GetTouch(0);
+
+                if(touch.phase == TouchPhase.Moved)
                 {
-                    touch = Input.GetTouch(0);
+                    Vector2 touchDeltaPosition = touch.position - previousTouchPosition;
 
-                    if (touch.phase == TouchPhase.Moved)
-                    {
-                        Vector2 touchDeltaPosition = touch.position - previousTouchPosition;
+                    // Calculate rotation around the Y axis
+                    Quaternion yRotation = Quaternion.Euler(0f, -touchDeltaPosition.x * speedModifier, 0f);
+                    // Calculate rotation around the X axis
+                    Quaternion xRotation = Quaternion.Euler(touchDeltaPosition.y * speedModifier, 0f, 0f);
 
-                        // Calculate rotation around the Y axis
-                        Quaternion yRotation = Quaternion.Euler(0f, -touchDeltaPosition.x * speedModifier, 0f);
-                        // Calculate rotation around the X axis
-                        Quaternion xRotation = Quaternion.Euler(touchDeltaPosition.y * speedModifier, 0f, 0f);
-
-                        // Apply rotations in world space
-                        obj.transform.rotation = yRotation * xRotation * obj.transform.rotation;
-                    }
+                    // Apply rotations in world space
+                    obj.transform.rotation = yRotation * xRotation * obj.transform.rotation;
                 }
             }
-            else
-            {
-                Debug.Log("Object is not in view");
-            }
-
+        }
             // Update the previous touch position for the next frame
             previousTouchPosition = touch.position;
-        }
     }
 
     bool IsAnyChildInView()
@@ -74,7 +66,9 @@ public class MedalBehavior : MonoBehaviour
 
     bool IsObjectInView(GameObject obj)
     {
-        Renderer renderer = obj.GetComponent<Renderer>();
+        GameObject childObj = obj.GetComponentInChildren<BoxCollider>().gameObject;
+        Debug.Log("Child object: " + childObj);
+        Renderer renderer = childObj.GetComponent<Renderer>();
         if (renderer == null) return false; // If the object doesn't have a renderer, it's not in view
 
         Bounds bounds = renderer.bounds;

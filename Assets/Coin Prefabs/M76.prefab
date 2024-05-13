@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56f7def3ce3ef064299badc6d1a33752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 0}
+  background: {fileID: 2100000, guid: f6840c1e746589d4ba16e23110afad84, type: 2}
   textList:
   - " I hjertet af Vatikanstaten flettede Pave Gregor XVI's vision sig ind i troens
     v\xE6v."
