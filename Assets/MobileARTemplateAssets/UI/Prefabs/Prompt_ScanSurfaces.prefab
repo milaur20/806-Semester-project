@@ -299,7 +299,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scan QR Kode
+  m_text: Scan Medaljen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9542af15fdf21ff4a8d006ca26638dd5, type: 2}
   m_sharedMaterial: {fileID: 5832918232171922949, guid: 9542af15fdf21ff4a8d006ca26638dd5, type: 2}
@@ -508,7 +508,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bev\xE6g kameraet t\xE6t p\xE5 QR koden \nfor at scanne den"
+  m_text: "Bev\xE6g kameraet t\xE6t p\xE5 medaljen \nfor at scanne den"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a02a641824cee44e995ae98ca5f27f8, type: 2}
   m_sharedMaterial: {fileID: 5090359109682189921, guid: 6a02a641824cee44e995ae98ca5f27f8, type: 2}

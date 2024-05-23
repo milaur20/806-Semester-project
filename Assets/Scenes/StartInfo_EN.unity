@@ -1553,6 +1553,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 640804291}
     m_Modifications:
+    - target: {fileID: 1243714429374162722, guid: cddcdb0400937404a8eeb9446ec8ff8d, type: 3}
+      propertyPath: m_text
+      value: Scan The Medallion
+      objectReference: {fileID: 0}
     - target: {fileID: 2427844569619799830, guid: cddcdb0400937404a8eeb9446ec8ff8d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1644,6 +1648,12 @@ PrefabInstance:
     - target: {fileID: 2427844569619799830, guid: cddcdb0400937404a8eeb9446ec8ff8d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731577115948134737, guid: cddcdb0400937404a8eeb9446ec8ff8d, type: 3}
+      propertyPath: m_text
+      value: 'Move your camera close to the
+
+        medallion, to scan it'
       objectReference: {fileID: 0}
     - target: {fileID: 2783494016943319698, guid: cddcdb0400937404a8eeb9446ec8ff8d, type: 3}
       propertyPath: m_Name

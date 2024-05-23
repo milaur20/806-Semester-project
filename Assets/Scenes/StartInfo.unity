@@ -1396,6 +1396,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2297587847512183390, guid: be22e32d3dedb6c4ba78862d09741ef5, type: 3}
+      propertyPath: m_text
+      value: Scan Medalje med kamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297587847512183390, guid: be22e32d3dedb6c4ba78862d09741ef5, type: 3}
+      propertyPath: m_fontSize
+      value: 12.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 2297587847512183390, guid: be22e32d3dedb6c4ba78862d09741ef5, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 3118926070070674477, guid: be22e32d3dedb6c4ba78862d09741ef5, type: 3}
+      propertyPath: m_text
+      value: "Bev\xE6g kameraet t\xE6t p\xE5 medaljen\nfor at scanne den"
+      objectReference: {fileID: 0}
     - target: {fileID: 6735488794880920742, guid: be22e32d3dedb6c4ba78862d09741ef5, type: 3}
       propertyPath: m_Pivot.x
       value: 0

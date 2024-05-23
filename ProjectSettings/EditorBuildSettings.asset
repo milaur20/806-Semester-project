@@ -18,8 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/ImageTrackingWithMultiplePrefabs.unity
     guid: a2d51113dfb4e2f408b8f1876caf42b4
   - enabled: 1
+    path: Assets/Scenes/NewStartScreen.unity
+    guid: ee75c4a518e0dec469d5fbd121638d7e
+  - enabled: 1
     path: Assets/Scenes/StartInfo.unity
     guid: 4d3e6e190a4949345b040cb256947388
+  - enabled: 1
+    path: Assets/Scenes/StartInfo_EN.unity
+    guid: 855bfa48ea7962546ad93e5fc2d1e5cf
   - enabled: 1
     path: Assets/Scenes/ImageTrackingWithMultiplePrefabs 1.unity
     guid: 17721e3e81e6d8842b4f9cefbc6a8442
